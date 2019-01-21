@@ -16,7 +16,7 @@ class Resolvers::ProductsSearch
 
     argument :OR, -> { types[ProductFilter] }
     argument :title_contains, types.String
-    argument :inventory_greater, types.Boolean
+    argument :in_stock, types.Boolean
   end
 
   option :filter, type: ProductFilter, with: :apply_filter
@@ -30,7 +30,7 @@ class Resolvers::ProductsSearch
   def normalize_filters(value, branches = [])
     scope = Product.all
     scope = scope.where('title LIKE ?', "%#{value['title_contains']}%") if value['title_contains']
-    scope = scope.where('inventory_count > 0', value['inventory_greater']) if value['inventory_greater']
+    scope = scope.where('inventory_count > 0', value['in_stock']) if value['in_stock']
 
     branches << scope
 
