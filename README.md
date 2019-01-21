@@ -27,14 +27,54 @@
 
 	* Run `$ rb db:seed` to populate with random items
 
+## How to Use
 
-
+* JSON requests can be used:
+	* A software, example: Postman
+	
+	* Using the Terminal
+	
+	* Using `localhost:3000/graphiql`
+	
+* Examples:
+	* Create a new product:
+	```javascript
+	mutation{
+ 	 createProduct(
+	    title: <String>,
+	    price: <Float>,
+	    inventory_count: <Integer>
+	  ) {
+	  id
+	  title
+	  price
+	  inventory_count
+  		}
+	}
+	```
+	* Search Filters:
+	```javascript
+	query{
+	  allProducts(filter: {in_stock: <Boolean>}) {
+	    title
+	    price
+	    inventory_count
+	  }
+	}
+	query{
+  	allProducts(filter: {title_contains: <String>}) {
+	    title
+	    price
+	    inventory_count
+	  }
+	}
+	```
+	
+	
 
 ## TODO
 
-* Add search/query by product
-
-* Add in-stock filter to search/query
+* Add filter to look for Products in stock
 
 * Add "Shopping Cart"
 
@@ -47,3 +87,5 @@
 * Faker Gem was used to create the random seed of objects to populate the database
 
 * A geat tutorial on Rails 5 REST API https://www.youtube.com/watch?v=QojnRc7SS9o
+
+* [HowToGraphQL](https://www.howtographql.com/)
