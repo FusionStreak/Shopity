@@ -8,7 +8,7 @@
 /.bundle
 
 # Ignore RubyMine IDE specific folder
-.idea/
+/.idea/
 
 # Ignore all logfiles and tempfiles.
 /log/*
