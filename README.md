@@ -27,7 +27,7 @@
 ## How to Use
 
 ### JSON requests are used to communicate with the server:
-* A software, example: Postman
+* A software, example: [Postman](https://www.getpostman.com/)
 	
 * Using a bash terminal
 	
