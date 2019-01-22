@@ -94,10 +94,10 @@ mutation {
 
 ## Resources
 
-* Faker Gem was used to create the random seed of objects to populate the database
+* [Faker](https://github.com/stympy/faker) Gem was used to create the random seed of objects to populate the database
 
-* bcrypt gem was used to authenticate and encrypt login details
+* [bcrypt](https://github.com/codahale/bcrypt-ruby) gem was used to authenticate and encrypt login details
 
-* A geat tutorial on Rails 5 REST API https://www.youtube.com/watch?v=QojnRc7SS9o
+* A geat tutorial on[ Rails 5 REST API](https://www.youtube.com/watch?v=QojnRc7SS9o)
 
 * [HowToGraphQL](https://www.howtographql.com/)
